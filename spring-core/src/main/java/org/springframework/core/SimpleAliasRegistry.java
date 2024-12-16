@@ -77,6 +77,7 @@ public class SimpleAliasRegistry implements AliasRegistry {
 					}
 				}
 				checkForAliasCircle(name, alias);
+				// 将bean别名注册到aliasMap中
 				this.aliasMap.put(alias, name);
 				if (logger.isTraceEnabled()) {
 					logger.trace("Alias definition '" + alias + "' registered for name '" + name + "'");
